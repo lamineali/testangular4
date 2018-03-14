@@ -1,0 +1,13 @@
+<div id="search-component">
+
+
+  <input placeholder="taper votre recherche..." class="form-group"  #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+
+  <ul class="search-result">
+    <li class="list-item"  *ngFor="let hero of heroes$ | async" >
+      <a routerLink="/detail/{{hero.id}}">
+        {{hero.name}}
+      </a>
+    </li>
+  </ul>
+</div>
